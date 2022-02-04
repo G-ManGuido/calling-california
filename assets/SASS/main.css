@@ -1,0 +1,57 @@
+@font-face {
+  font-family: "larish";
+  src: url(../fonts/LarishNeueSemibold2.woff);
+}
+@font-face {
+  font-family: "larishbold";
+  src: url(../fonts/LarishNeue-Semibold.woff);
+}
+@font-face {
+  font-family: "work";
+  src: url(../fonts/Work_Sans/WorkSans-VariableFont_wght.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "larish";
+  background: #000;
+  color: #fff;
+}
+
+div {
+  text-align: center;
+}
+
+img {
+  width: 1px;
+  opacity: 0.8;
+  height: 30vh;
+}
+
+h1 {
+  font-size: 6rem;
+  -webkit-text-stroke: 1px #fff;
+  text-align: center;
+  width: 60%;
+  line-height: 80%;
+  margin: 0 auto;
+}
+
+.outline {
+  color: #000;
+}
+
+.bear img {
+  width: 50%;
+}
+
+p {
+  font-family: "work";
+  font-size: 1rem;
+  text-align: center;
+  padding: 1rem 0;
+}/*# sourceMappingURL=main.css.map */

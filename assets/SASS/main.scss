@@ -1,0 +1,34 @@
+@import "_general.scss";
+@import "_variables.scss";
+@import "_mixin.scss";
+
+
+div{
+    text-align: center;
+}
+img{
+    width: 1px;
+    opacity: 0.8;
+    height: 30vh;
+}
+h1{
+    font-size: 6rem;
+    -webkit-text-stroke: 1px #fff;
+    text-align: center;
+    width: 60%;
+    line-height: 80%;
+    margin: 0 auto;
+}
+.outline{
+    color: #000;
+}
+
+.bear img{
+    width: 50%
+}
+p{
+        font-family: 'work';
+        font-size: 1rem;
+        text-align: center;  
+        padding: 1rem 0; 
+}
