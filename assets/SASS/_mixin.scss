@@ -5,11 +5,32 @@
     justify-content: space-between;
     align-items: center;
 }
-@mixin styletext($fz, $fw, $co, $td, $tt, $bg){
-    font-size: $fz;
-    font-weight: $fw;
-    color: $co;
-    text-decoration: $td;
-    text-transform: $tt;
-    background: $bg;
+
+// mixin position
+@mixin position($top, $right, $bottom, $left) {
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+// mixin animations
+@mixin roundandround{
+    animation: rotation 20s infinite linear;
+    @keyframes rotation{
+        0%{transform: rotate(0deg)}
+        100%{transform: rotate(359deg)}
+    }
+}
+@mixin scrollingX{
+    animation: scroll 10s infinite linear;
+    @keyframes scroll{
+        0%{transform: translateX(6%)}
+        50%{transform: translateX(-10%)}
+        100%{transform: translateX(6%);}
+    }
+}
+@mixin spanText{
+    color: #fff;
+    -webkit-text-stroke: 1px #000;
 }

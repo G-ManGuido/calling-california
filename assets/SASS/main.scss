@@ -2,33 +2,280 @@
 @import "_variables.scss";
 @import "_mixin.scss";
 
-
-div{
-    text-align: center;
-}
-img{
-    width: 1px;
-    opacity: 0.8;
-    height: 30vh;
-}
-h1{
-    font-size: 6rem;
-    -webkit-text-stroke: 1px #fff;
-    text-align: center;
-    width: 60%;
-    line-height: 80%;
+header{
+    height: 120vh;
+    width: 86%;
     margin: 0 auto;
-}
-.outline{
-    color: #000;
-}
-
-.bear img{
-    width: 50%
-}
-p{
-        font-family: 'work';
+    div{
+        text-align: center;
+        img{
+            width: 2px;
+            height: 25vh;
+            margin: 0.7rem 0 2rem 0;
+        }
+    }
+    p{
         font-size: 1rem;
         text-align: center;  
         padding: 1rem 0; 
+    }
+    h1 {
+        -webkit-text-stroke: 1px #fff;
+        text-align: center;
+        width: 60%;
+        line-height: 80%;
+        margin: 0 auto;
+        .outline{
+            color: #000;
+        }
+    }
+    .bear {
+        display: flex;
+        align-items: center;
+    }
+    .bear img{
+        opacity: 1;
+        width: 4rem;
+    }
+}
+
+main{
+    overflow: hidden;
+    // -------------------------------------
+    // California History
+    // -------------------------------------
+    section:nth-of-type(1){
+        background-image: url(../img/map.svg);
+        background-size: 42% ;
+        background-repeat: no-repeat;
+        background-position-x: right;
+        background-position-y: 134%;
+        margin-bottom: 8rem;
+    article{
+        width: 86%;
+        margin: 0 auto 10% auto;
+        p{
+            padding: 0.7rem 0 0.3rem 0;
+        }
+        p:nth-of-type(1){
+            padding: 0 0 8rem 0;
+        }
+         .big{
+            padding: 0;
+        }
+    }
+}
+    // -------------------------------------
+    // Stuck in the middle
+    // -------------------------------------
+    section:nth-of-type(2){
+        background-color: #fff;
+        color: #000;
+        article:nth-of-type(1){
+            width: 33%;
+            margin: 0 auto;
+            padding: 60vh 0 40vh 0;
+
+            h2{
+                text-align: left;
+                line-height: 90%;
+                margin: 0 auto;
+            }
+            p{
+                font-size: 0.9rem;
+                line-height: 1.6rem;
+                padding: 1rem 2.2rem 0 0;
+            }
+        }
+        article:nth-of-type(2){
+            width: 33%;
+            margin: 0 auto;
+            padding: 30vh 0 60vh 0;
+            p{
+                font-size: 0.9rem;
+                line-height: 1.6rem;
+                padding: 1rem 1.2rem 0 0;
+            }
+        } 
+    }
+    .stuck{
+        height: 230vh;
+        position: relative;
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        place-items: center;
+        div{
+            position: absolute;
+            width: 23%;
+            aspect-ratio: 3/2;
+        }
+        &-1{
+            @include position(-5%, 10%,  "", "");
+        }
+        &-2{
+            @include position(15%, "", "", 5%);
+        }
+        &-3{
+            @include position(35%, 0, "", "");
+        }
+        &-4{
+            @include position(48%, "", "", 15%);
+        }
+        &-5{
+            @include position(58%, 13%, "", "");
+        }
+        &-6{
+            @include position(73%, "", "", 0);
+        }
+        &-7.mBig{
+            @include position("", 10%, -4%, "");
+            width: 33%;
+            aspect-ratio: 3/2;
+            z-index: 3;
+        }
+    }
+    // -------------------------------------
+    // The Golden Bear
+    // -------------------------------------
+    section:nth-of-type(3){
+        width: 100%;
+        margin-top: 20%;
+        article:nth-of-type(1) {
+            width: 86%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 49% 51%;
+            div:nth-of-type(3){
+                width: 60%;
+            }
+        }
+        .gb{
+            position: relative;
+            padding: 5% 0 55% 10%;
+            &-1{
+                position: absolute;
+                z-index: 2;
+                width: 55%;
+                aspect-ratio: 2/2;
+                @include position("", "", -13%, 10%);
+            }
+            &-2{
+                position: absolute;
+                z-index: 5;
+                width: 28%;
+                aspect-ratio: 3/4;
+                @include position("", 12%, -6%, "");
+            }
+            &-circle{
+                position: absolute;
+                overflow: hidden;
+                z-index: 3;
+                width: 37%;
+                @include position("", -15%, -35%, "");
+                @include roundandround;
+            }
+        }
+    }
+    // -------------------------------------
+    // The Poppy Bear
+    // -------------------------------------
+    section:nth-of-type(4){
+        background-color: #fff;
+        color: #000;
+        width: 100%;
+        padding-top: 20%;
+        article:nth-of-type(1) {
+            width: 86%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 49% 51%;
+        }
+        div:nth-of-type(3){
+            width: 60%;
+        }
+    }
+    .poppyBear{
+        position: relative;
+        padding: 0 0 50% 10%;
+        overflow: hidden;
+        margin-top: 10%;
+        width: 100%;
+        &-1{
+            position: absolute;
+            z-index: 2;
+            width: 53%;
+            aspect-ratio: 1/1;
+            @include position("", "", 5%, 32%);
+        }
+        &-2{
+            position: absolute;
+            z-index: 3;
+            width: 25%;
+            aspect-ratio: 3/4;
+            @include position("", "", 12%, 12%);
+        }
+    }
+    // -------------------------------------
+    // JOIN US
+    // -------------------------------------
+        .scroll{
+            position: relative;
+            height: 95vh;
+            overflow: hidden;
+            padding-bottom: 6rem;
+            article{
+                width: 33%;
+                margin: 10% 0 0 10%;
+                p{
+                padding-bottom: 1rem;
+                }
+            }
+            &Text{
+                position: absolute;
+                width: 100%;
+                transform: rotate(45deg);
+                background-color:#fff;
+                height: 8rem;
+                color: #000;
+                @include position(29%, -26%, "", "");
+                div{
+                    width: 400%;
+                    font-size: 7rem;
+                    @include scrollingX;
+                    .scrollSpan{
+                        @include spanText;
+                    }
+                }
+            }
+        }
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    ul{
+        gap: 2rem;
+        margin-bottom: 13%;
+        img{
+            width: 1.5rem;
+        }
+        li{
+            width: 0.8rem;
+            height: 1rem;
+        }
+    }
+    p{
+        margin-bottom: 13%;
+    }
+    .logos{
+        display: flex;
+        align-items: flex-end;
+        gap:1rem;
+        height: 50px;
+        img:nth-of-type(2){
+            height: 80%;
+        }
+    }
+
 }
