@@ -18,7 +18,7 @@ body{
     color: #fff;
 }
 h1 {
-    font-size: 6rem;
+    font-size: clamp(2rem, 6rem, 8rem);
 }
 h2{
     font-size: 5.2rem;

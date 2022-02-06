@@ -19,7 +19,7 @@ body {
 }
 
 h1 {
-  font-size: 6rem;
+  font-size: clamp(2rem, 6rem, 8rem);
 }
 
 h2 {
@@ -390,6 +390,7 @@ main .scrollText div {
   }
 }
 main .scrollText div .scrollSpan {
+  font-family: "Larish Neue Semibold";
   color: #fff;
   -webkit-text-stroke: 1px #000;
 }
@@ -409,7 +410,7 @@ footer ul img {
 }
 footer ul li {
   width: 0.8rem;
-  height: 1rem;
+  height: 1.2rem;
 }
 footer p {
   margin-bottom: 13%;
@@ -422,4 +423,137 @@ footer .logos {
 }
 footer .logos img:nth-of-type(2) {
   height: 80%;
+}
+
+@media screen and (max-width: 1023px) {
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .middle {
+    font-size: 1.3rem;
+  }
+
+  header {
+    height: unset;
+  }
+  header h1 {
+    width: 100%;
+    font-size: 3rem;
+  }
+
+  main section:nth-of-type(1) {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+  }
+  main article {
+    width: 100%;
+  }
+  main .big {
+    font-size: 2.5rem;
+  }
+  main section:nth-of-type(2) {
+    margin: 0;
+  }
+  main section:nth-of-type(2) article:nth-of-type(1) {
+    background-color: #666;
+    color: #fff;
+    height: unset;
+    padding: 5% 4%;
+    margin-bottom: 4px;
+    width: 100%;
+  }
+  main section:nth-of-type(2) article:nth-of-type(1) h2 {
+    font-size: 1.5rem;
+  }
+  main section:nth-of-type(2) article:nth-of-type(1) p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  main section:nth-of-type(2) article:nth-of-type(2) {
+    background-color: #666;
+    color: #fff;
+    height: unset;
+    padding: 5% 4%;
+    margin-bottom: 4px;
+    width: 100%;
+  }
+  main section:nth-of-type(2) article:nth-of-type(2) p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  main .stuck {
+    padding: 2px 0;
+    height: unset;
+    position: unset;
+    grid-template-rows: unset;
+  }
+  main .stuck div {
+    position: unset;
+    width: 100%;
+  }
+  main .stuck-7.mBig {
+    width: 100%;
+  }
+  main section:nth-of-type(3) {
+    margin-top: 5%;
+    width: 100%;
+    padding: 0 4%;
+  }
+  main section:nth-of-type(3) article:nth-of-type(1) {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  main section:nth-of-type(3) article:nth-of-type(1) p:nth-of-type(2) {
+    text-align: right;
+  }
+  main section:nth-of-type(4) {
+    width: 100%;
+    padding: 2% 4% 0 4%;
+  }
+  main section:nth-of-type(4) article:nth-of-type(1) {
+    margin-top: 10%;
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  main section:nth-of-type(4) article:nth-of-type(1) p:nth-of-type(2) {
+    text-align: right;
+  }
+  main .scroll {
+    padding-bottom: 0;
+    height: 50vh;
+  }
+  main .scroll article {
+    width: 90%;
+    margin: 0 auto;
+  }
+  main .scroll article p:nth-of-type(1) {
+    margin-top: 2rem;
+  }
+  main .scroll .scrollText {
+    display: none;
+  }
+
+  footer {
+    flex-direction: column;
+    padding-bottom: 10%;
+  }
+  footer div {
+    text-align: center;
+  }
+  footer div ul {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  footer div p {
+    margin-bottom: 5%;
+  }
+  footer .logos {
+    justify-content: space-around;
+    width: 120px;
+    height: 100%;
+  }
 }/*# sourceMappingURL=main.css.map */
